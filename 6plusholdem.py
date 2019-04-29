@@ -69,6 +69,7 @@ def main():
                 break
         deck.remove(hand[0])
         deck.remove(hand[1])
+        hand.sort(key=lambda x: rank_to_num[x[0]], reverse=True)
         hole_cards.append((hand[0], hand[1]))
 
     boards = list(itertools.combinations(deck, 5))
